@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond&family=Inter&family=Lobster&family=Open+Sans&family=Poppins:wght@400;500&family=Roboto:wght@500&family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              fontFamily:{
+                inter:['Inter','sans-serif'],
+              },
+            }
+          }
+        }
+      </script>
+</head>
+<body class="font-inter">
+    <header class="max-w-7xl mx-auto bg-blue-200 flex justify-between items-center px-3 py-2 my-5 rounded-sm">
+        <div>
+            <h1 class="text-3xl font-semibold">Interactive </h1> 
+            <h1 class="text-blue-500">Geometry Genius</h1>
+        </div>
+        <div>
+            <button class="bg-blue-900 text-white px-2 py-1 rounded-md" id="btn-blog">blog</button>
+        </div>
+    </header>
+    <main>
+        <section class="grid md:grid-cols-4 grid-cols-1 max-w-7xl mx-auto gap-4" id="main-container">
+            <div class="border
+             border-black rounded-md  text-center" id="card-container-one"><img class="w-1/2 mx-auto my-3" src="images/triangle.png" alt="">
+            <h1 class="text-xl my-2 font-semibold">Triangle</h1>
+            <h3>Area (A) =0.5*b*h</h3>
+            <input type="text" class="w-1/4 my-3 mx-2 border border-black rounded-sm px-2" placeholder="b" id="triangle-b"><span>cm</span>
+            <input type="text" class="w-1/4 mx-2 border border-black rounded-sm px-2" placeholder="h" id="triangle-h"><span>cm</span>
+            <button class="bg-blue-600 px-10 py-2 my-3 text-white rounded-md" id="triangle-btn">Calculate</button>
+            </div>
+            <div class="border
+            border-black rounded-md hover:bg-red-400 text-center" id="card-container-two"><img class="w-1/2 mx-auto my-3" src="images/rectangle.png" alt="">
+           <h1 class="text-xl my-2 font-semibold">Rectangle</h1>
+           <h3>Area (A) = w*L</h3>
+           <input type="text" class="w-1/4 my-3 mx-2 border border-black rounded-sm px-2" placeholder="w" id="rectangle-w"><span>cm</span>
+           <input type="text" class="w-1/4 mx-2 border border-black rounded-sm px-2" placeholder="l" id="rectangle-l"><span>cm</span>
+           <button class="bg-blue-600 px-10 py-2 my-3 text-white rounded-md" id="rectangle-btn">Calculate</button>
+           </div>
+           <div class="border
+           border-black rounded-md hover:bg-red-400 text-center" id="card-container-three"><img class="w-1/2 mx-auto my-3" src="images/parallelogram.png" alt="">
+          <h1 class="text-xl my-2 font-semibold">Parallelogram</h1>
+          <h3>Area (A) = b*h</h3>
+          <input type="text" class="w-1/4 my-3 mx-2 border border-black rounded-sm px-2" placeholder="b" id="parallelogram-b"><span>cm</span>
+          <input type="text" class="w-1/4 mx-2 border border-black rounded-sm px-2" placeholder="h" id="parallelogram-h"><span>cm</span>
+          <button class="bg-blue-600 px-10 py-2 my-3 text-white rounded-md" id="parallelogram-btn">Calculate</button>
+          </div>
+          <div class="border
+          border-black rounded-md hover:bg-red-400 px-2 row-span-2 h-fit" id="calculate-display">
+          <h1 class="text-2xl font-semibold my-3 text-center"><u>Area Calculation</u></h1>
+         <ol></ol>
+         </div>
+         <div class="border
+         border-black rounded-md hover:bg-red-400 text-center" id="card-container-four"><img class="w-1/2 mx-auto my-3" src="images/rhombus.png" alt="">
+        <h1 class="text-xl my-2 font-semibold">Rhombus</h1>
+        <h3>Area (A) =0.5*d<sub>1</sub>*d<sub>2</sub></h3>
+        <input type="text" class="w-1/4 my-3 mx-2 border border-black rounded-sm px-2" placeholder="d1" id="rhombus-done"><span>cm</span>
+        <input type="text" class="w-1/4 mx-2 border border-black rounded-sm px-2" placeholder="d2" id="rhombus-dtwo"><span>cm</span>
+        <button class="bg-blue-600 px-10 py-2 my-3 text-white rounded-md" id="rhombus-btn">Calculate</button>
+        </div>
+        <div class="border
+        border-black rounded-md hover:bg-red-400 text-center" id="card-container-five"><img class="w-1/2 mx-auto my-3" src="images/pentagon.png" alt="">
+       <h1 class="text-xl my-2 font-semibold">Pentagon</h1>
+       <h3>Area (A) =0.5*p*b</h3>
+       <input type="text" class="w-1/4 my-3 mx-2 border border-black rounded-sm px-2" placeholder="p" id="pentagon-p"><span>cm</span>
+       <input type="text" class="w-1/4 mx-2 border border-black rounded-sm px-2" placeholder="b" id="pentagon-b"><span>cm</span>
+       <button class="bg-blue-600 px-10 py-2 my-3 text-white rounded-md" id="pentagon-btn">Calculate</button>
+       </div>
+       <div class="border
+       border-black rounded-md hover:bg-red-400 text-center" id="card-container-six"><img class="w-1/2 mx-auto my-3" src="images/ellipse.png" alt="">
+      <h1 class="text-xl my-2 font-semibold">Ellipse</h1>
+      <h3>Area (A) =r*a*b</h3>
+      <input type="text" class="w-1/4 my-3 mx-2 border border-black rounded-sm px-2" placeholder="b" id="ellipse-a"><span>cm</span>
+      <input type="text" class="w-1/4 mx-2 border border-black rounded-sm px-2" placeholder="h" id="ellipse-b"><span>cm</span>
+      <button class="bg-blue-600 px-10 py-2 my-3 text-white rounded-md" id="ellipse-btn">Calculate</button>
+      </div>
+        </section>
+    </main>
+    <script src="js/multiplication.js"></script>
+    <script src="js/mesure.js"></script>
+
+</body>
+</html>
